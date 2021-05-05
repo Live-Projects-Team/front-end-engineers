@@ -1,13 +1,41 @@
-.first{
+.first {
     font-size: 2vw;
     margin: 0;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: lighter;
 }
-.bold{
+
+.bold {
     font-weight: bolder;
 }
-.navbar-brand{
+
+.navbar-brand {
     margin-left: 1vw;
     margin-right: 1vw;
+}
+
+.navbar {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+}
+
+.navbar::after {
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    filter: blur(10px);
+}
+
+.navbar-collapse {
+    position: relative;
+    float: right;
+}
+
+.hero_image {
+    height: 400px;
+    position: absolute;
+    top: 0;
+    background-image: url("../images/backgrounds/livepesa_phone_eating.jpg");
+    background-position: center;
+    background-size: cover;
 }
