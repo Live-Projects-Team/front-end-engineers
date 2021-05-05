@@ -3167,6 +3167,18 @@ fieldset:disabled .btn {
     border-color: #f9fafb
 }
 
+.btn-glass {
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.205);
+    backdrop-filter: blur(15px);
+}
+
+.btn-glass:hover {
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.651);
+    backdrop-filter: blur(15px);
+}
+
 .btn-check:focus+.btn-light,
 .btn-light:focus {
     color: #000;

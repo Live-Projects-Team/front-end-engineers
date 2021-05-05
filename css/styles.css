@@ -1,5 +1,5 @@
 body {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Questrial', sans-serif;
 }
 
 .first {
@@ -33,7 +33,7 @@ body {
 }
 
 .hero_image {
-    height: 600px;
+    height: 550px;
     position: absolute;
     top: 0;
     background-image: url("../images/backgrounds/livepesa_phone_eating.jpg");
