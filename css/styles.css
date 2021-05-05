@@ -1,0 +1,13 @@
+.first{
+    font-size: 2vw;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: lighter;
+}
+.bold{
+    font-weight: bolder;
+}
+.navbar-brand{
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
