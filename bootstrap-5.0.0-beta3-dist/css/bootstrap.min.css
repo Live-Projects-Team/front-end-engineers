@@ -4181,13 +4181,15 @@ fieldset:disabled .btn {
 }
 
 .navbar {
+    position: sticky;
     position: relative;
     display: flex;
+    top: 0;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding-top: .5rem;
-    padding-bottom: .5rem
+    padding-bottom: .5rem;
 }
 
 .navbar>.container,
@@ -7919,6 +7921,11 @@ fieldset:disabled .btn {
 
 .bg-danger {
     background-color: #dc3545!important
+}
+
+.bg-glass {
+    background-color: rgba(255, 255, 255, 0.205);
+    backdrop-filter: blur(15px);
 }
 
 .bg-light {
