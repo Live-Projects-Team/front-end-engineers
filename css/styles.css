@@ -1,17 +1,18 @@
-.first {
-    font-size: 2vw;
-    margin: 0;
+body {
     font-family: 'Josefin Sans', sans-serif;
-    font-weight: lighter;
 }
 
-.bold {
+.first {
+    font-size: 30px;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #32289b;
     font-weight: bolder;
 }
 
 .navbar-brand {
-    margin-left: 1vw;
-    margin-right: 3vw;
+    margin-left: 2vw;
+    margin-right: 4vw;
 }
 
 .navbar {
@@ -32,10 +33,17 @@
 }
 
 .hero_image {
-    height: 400px;
+    height: 600px;
     position: absolute;
     top: 0;
     background-image: url("../images/backgrounds/livepesa_phone_eating.jpg");
     background-position: center;
     background-size: cover;
+}
+
+.welcome_text {
+    margin: 0 auto;
+    margin-top: 20vh;
+    font-family: 'Questrial', sans-serif;
+    color: white;
 }

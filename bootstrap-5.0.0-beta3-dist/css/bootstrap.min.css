@@ -4090,6 +4090,10 @@ fieldset:disabled .btn {
     display: block;
     padding: .5rem 1rem;
     text-decoration: none;
+    font-family: 'Red Hat Display', sans-serif;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out
 }
 
