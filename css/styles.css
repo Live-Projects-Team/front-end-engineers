@@ -62,3 +62,26 @@ body {
     font-family: 'Questrial', sans-serif;
     color: grey;
 }
+
+.footer_header {
+    color: black;
+    font-family: 'Questrial', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 25px;
+}
+
+.footer_ul {
+    color: rgb(165, 165, 165);
+    text-decoration: none;
+    list-style-type: none;
+    margin-top: 50px;
+}
+
+.footer_ul>li {
+    margin-top: 10px;
+}
+
+.live_pesa_footer {
+    margin-top: 150px;
+}
