@@ -23,18 +23,19 @@
         }
         
         .list-group-item:hover {
-            background-color: #EBB22C !important;
+            background-color: rgb(255, 255, 255);
+            backdrop-filter: blur(5px);
         }
         
-        .modal-body {
-            background-color: #EBB22C !important;
+        .modal-header {
+            background-color: transparent;
         }
     </style>
 
 
 </head>
 
-<body>
+<body personal>
     <nav class="navbar navbar-light bg-glass shadow">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -72,27 +73,25 @@
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content">
+            <div class="modal-content bg-glass">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Menu</h5>
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
 
-                    <ul class="list-group list-group-flush bg-glass">
-                        <li class="list-group-item">My Account</li>
-                        <li class="list-group-item">Pay Bills</li>
-                        <li class="list-group-item">Goverment Payment</li>
-                        <li class="list-group-item">Send Money</li>
-                        <li class="list-group-item">Financial Services</li>
-                        <li class="list-group-item">Sports Payment</li>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" style="background-color: transparent;">My Account</li>
+                        <li class="list-group-item" style="background-color: transparent;">Pay Bills</li>
+                        <li class="list-group-item" style="background-color: transparent;">Goverment Payment</li>
+                        <li class="list-group-item" style="background-color: transparent;">Send Money</li>
+                        <li class="list-group-item" style="background-color: transparent;">Financial Services</li>
+                        <li class="list-group-item" style="background-color: transparent;">Sports Payment</li>
 
                     </ul>
 
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
+
             </div>
         </div>
     </div>

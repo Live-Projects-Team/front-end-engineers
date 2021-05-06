@@ -101,3 +101,10 @@ body {
     color: #32289b;
     transition: 0.7s;
 }
+
+[personal] {
+    background-image: url("../images/backgrounds/hand.jpeg");
+    background-position: center;
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;
+}
