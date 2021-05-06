@@ -47,3 +47,7 @@ body {
     font-family: 'Questrial', sans-serif;
     color: white;
 }
+
+.livepesa_main_landing {
+    position: relative;
+}
