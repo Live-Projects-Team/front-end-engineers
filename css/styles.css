@@ -52,3 +52,13 @@ body {
     position: relative;
     margin-top: 600px;
 }
+
+.live_project_feature_name {
+    font-family: 'Questrial', sans-serif;
+    font-size: 4vw;
+}
+
+.live_project_feature_desc {
+    font-family: 'Questrial', sans-serif;
+    color: grey;
+}
