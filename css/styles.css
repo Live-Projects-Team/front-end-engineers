@@ -90,3 +90,14 @@ body {
     padding-right: 4%;
     background-color: whitesmoke;
 }
+
+[footericons]>i {
+    font-size: 20px;
+    color: rgb(165, 165, 165);
+    transition: 0.7s;
+}
+
+[footericons]>i:hover {
+    color: #32289b;
+    transition: 0.7s;
+}
