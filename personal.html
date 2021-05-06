@@ -12,22 +12,67 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;400&family=Questrial&family=Red+Hat+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+<style>
+    .modal{
+width: 300px; ;
+    }
+    .modal-content{
+        width: 300px;
+    }
+    .list-group-item:hover{
+        background-color:#EBB22C !important;
+    }
+    .modal-body{
+        background-color: #EBB22C !important;
+    }
+</style>
+
+
 </head>
 
 <body>
     <nav class="navbar navbar-light bg-light shadow">
         <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1">Menu</span>
-            <button class="navbar-toggler" type="button">
+          <span class="navbar-brand mb-0 h1">Menu</span>
+          <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
     </nav>
 
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">My Account</li>
+                <li class="list-group-item">Pay Bills</li>
+                <li class="list-group-item">Goverment Payment</li>
+                <li class="list-group-item">Send Money</li>
+                <li class="list-group-item">Financial Services</li>
+                <li class="list-group-item">Sports Payment</li>
+
+              </ul>
 
 
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script src="./bootstrap-5.0.0-beta3-dist/js/bootstrap.min.js"></script>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+      <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+      <script src="./bootstrap-5.0.0-beta3-dist/js/bootstrap.min.js"></script>  
 </body>
 
 </html>
