@@ -4122,15 +4122,13 @@ fieldset:disabled .btn {
 }
 
 .nav-tabs {
-    border-bottom: 1px solid #dee2e6
+    border-bottom: 1px solid transparent
 }
 
 .nav-tabs .nav-link {
-    margin-bottom: -1px;
+    margin: 2px;
     background: 0 0;
-    border: 1px solid transparent;
-    border-top-left-radius: .25rem;
-    border-top-right-radius: .25rem
+    border-radius: 2em;
 }
 
 .nav-tabs .nav-link:focus,
@@ -4197,7 +4195,6 @@ fieldset:disabled .btn {
 }
 
 .navbar {
-    position: sticky;
     position: relative;
     display: flex;
     top: 0;
