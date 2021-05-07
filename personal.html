@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/favicon/favicon.ico" type="image/x-icon">
     <title>Live-Pesa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="./bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -15,8 +17,78 @@
     <style>
         .personal_nav {
             height: 100%;
+            width: 200px;
+            z-index: 10;
             position: fixed;
+            float: left;
             top: 0;
+        }
+        
+        .nav-tabs .nav-link.active {
+            background-color: #32289b;
+            color: white;
+        }
+        
+        .nav-tabs .nav-link {
+            background-color: transparent;
+            color: #32289b;
+        }
+        
+        .nav-link:hover {
+            box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+            color: #32289b;
+            border: none;
+        }
+        
+        .tab-content {
+            width: calc(100% - 260px);
+            height: auto;
+            margin: 30px 30px 30px 230px;
+            border-radius: 10px;
+            padding-bottom: 20px;
+        }
+        
+        .dp_account {
+            height: 150px;
+            width: 150px;
+            margin: 0 auto;
+            border-radius: 100%;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        
+        .name_image {
+            height: 300px;
+            text-align: center;
+        }
+        
+        .bg-personal {
+            width: 95%;
+            margin-top: 20px;
+            padding: 20px 0 20px 0;
+            border-radius: 10px;
+            background: rgba(245, 245, 245, 0.808);
+        }
+        
+        .u_balace {
+            font-size: 3vw;
+            color: #32289b;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .transaction_item {
+            margin: 2px 0 0 5%;
+            padding: 10px;
+            background-color: white;
+        }
+        
+        .transaction_in {
+            color: lightgreen;
+        }
+        
+        .transaction_out {
+            color: red;
         }
     </style>
 
@@ -26,32 +98,138 @@
 <body personal>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-2 personal_nav bg-glass">
+            <div class="personal_nav bg-glass">
                 <div class="container" style="margin-top: 20px;">
                     <span class="first" style="font-size: 30px;">livepesa</span>
                 </div>
                 <ul class="nav nav-tabs flex-column" style="margin-top: 30px;">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">My Account</a>
+                        <a class="nav-link active" data-bs-toggle="tab" href="#my_account">My Account</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pay Bills</a>
+                        <a class="nav-link" data-bs-toggle="tab" href="#paybill">Pay Bills</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Goverment Payment</a>
+                        <a class="nav-link" data-bs-toggle="tab" href="#goverment">Goverment Payment</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Send Money</a>
+                        <a class="nav-link" data-bs-toggle="tab" href="#send">Send Money</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Financial Services</a>
+                        <a class="nav-link" data-bs-toggle="tab" href="#services">Financial Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sports Payment</a>
+                        <a class="nav-link" data-bs-toggle="tab" href="#sports">Sports Payment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#setting">Settings</a>
                     </li>
                 </ul>
+                <div class="container" style="position: fixed; bottom: 30px; color: grey; padding-left: 40px;">
+                    <i class="fa fa-sign-out"></i>
+                    <span>log out</span>
+                </div>
             </div>
-            <div class="col-10"></div>
+
+
+            <div class="tab-content bg-glass">
+                <div class="tab-pane active" id="my_account">
+                    <div class="container name_image bg-personal">
+                        <div style="height: 150px; width: 100%;">
+                            <img src="./images/placeholders/live-pesa-placeholder-avatar.png" class="dp_account bg-glass" alt="displayPicture">
+                        </div>
+                        <div style="margin-top: 30px;">
+                            <span style="font-size: 4vw;">User Name</span>
+                            <br>
+                            <span style="color: grey;">yourname@example.com</span>
+                        </div>
+
+                    </div>
+                    <div class="container u_balace bg-personal">
+                        <div class="userBalance"><span id="balance">650,000</span> TZS</div>
+                    </div>
+                    <div class="container short_summary bg-personal">
+                        <span style="color: #32289b; font-weight: bold; font-size: 2.5vw; margin: 7%;">Mini Statement</span>
+                        <div class="container" id="transaction">
+                            <div class="row transaction_item">
+                                <div class="col transaction_name">myUS Shopping</div>
+                                <div class="col transaction_date">19-6-2021</div>
+                                <div class="col transaction_amount"><span id="in_out"><i class="fa fa-arrow-down transaction_out"></i></span> 3,000.00 TZS </div>
+                            </div>
+
+                            <div class="row transaction_item">
+                                <div class="col transaction_name">mBet PLC</div>
+                                <div class="col transaction_date">15-6-2021</div>
+                                <div class="col transaction_amount"><span id="in_out"><i class="fa fa-arrow-down transaction_out"></i></span>15,000.00 TZS</div>
+                            </div>
+
+                            <div class="row transaction_item">
+                                <div class="col transaction_name">Frank Ilunga</div>
+                                <div class="col transaction_date">10-6-2021</div>
+                                <div class="col transaction_amount"><span id="in_out"><i class="fa fa-arrow-up transaction_in"></i></span>10,000.00 TZS</div>
+                            </div>
+
+                            <div class="row transaction_item">
+                                <div class="col transaction_name">Victoria Mwinyi</div>
+                                <div class="col transaction_date">30-5-2021</div>
+                                <div class="col transaction_amount"><span id="in_out"><i class="fa fa-arrow-up transaction_in"></i></span>20,000.00 TZS</div>
+                            </div>
+                            <div class="row transaction_item">
+                                <div class="col transaction_name">mBet PLC</div>
+                                <div class="col transaction_date">20-5-2021</div>
+                                <div class="col transaction_amount"><span id="in_out"><i class="fa fa-arrow-down transaction_out"></i></span>500.00 TZS</div>
+                            </div>
+                            <div class="row transaction_item">
+                                <div class="col transaction_name">mBet PLC</div>
+                                <div class="col transaction_date">15-6-2021</div>
+                                <div class="col transaction_amount"><span id="in_out"><i class="fa fa-arrow-down transaction_out"></i></span>15,000.00 TZS</div>
+                            </div>
+
+                            <div class="row transaction_item">
+                                <div class="col transaction_name">Frank Ilunga</div>
+                                <div class="col transaction_date">10-6-2021</div>
+                                <div class="col transaction_amount"><span id="in_out"><i class="fa fa-arrow-up transaction_in"></i></span>10,000.00 TZS</div>
+                            </div>
+
+                            <div class="row transaction_item">
+                                <div class="col transaction_name">Victoria Mwinyi</div>
+                                <div class="col transaction_date">30-5-2021</div>
+                                <div class="col transaction_amount"><span id="in_out"><i class="fa fa-arrow-up transaction_in"></i></span>20,000.00 TZS</div>
+                            </div>
+                            <div class="row transaction_item">
+                                <div class="col transaction_name">mBet PLC</div>
+                                <div class="col transaction_date">20-5-2021</div>
+                                <div class="col transaction_amount"><span id="in_out"><i class="fa fa-arrow-down transaction_out"></i></span>500.00 TZS</div>
+                            </div>
+                            <div class="row transaction_item">
+                                <div class="col transaction_name">HELSB</div>
+                                <div class="col transaction_date">25-4-2021</div>
+                                <div class="col transaction_amount"><span id="in_out"><i class="fa fa-arrow-up transaction_in"></i></span>1,500,000.20 TZS</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" style="background-color: red;" id="paybill">
+                    <p>pay bils</p>
+                </div>
+                <div class="tab-pane" style="background-color: blue;" id="goverment">
+                    <p>Government</p>
+                </div>
+                <div class="tab-pane" style="background-color: yellow;" id="send">
+                    <p>send money</p>
+                </div>
+                <div class="tab-pane" style="background-color: orange;" id="services">
+                    <p>Financial services</p>
+                </div>
+                <div class="tab-pane" style="background-color: wheat;" id="sports">
+                    <p>sports Payment</p>
+                </div>
+
+                <div class="tab-pane" style="background-color: cyan;" id="setting">
+                    <p>Setting</p>
+                </div>
+            </div>
         </div>
 
     </div>
