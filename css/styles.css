@@ -103,8 +103,10 @@ body {
 }
 
 [personal] {
-    background-image: url("../images/backgrounds/hand.jpeg");
+    /* background-image: url("../images/backgrounds/hand.jpeg"); */
+    background-image: url("https://images.pexels.com/photos/122458/pexels-photo-122458.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
     background-position: center;
     background-size: 100%, 100%;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
