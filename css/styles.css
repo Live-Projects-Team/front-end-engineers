@@ -112,7 +112,7 @@ body {
 }
 
 .bill_image {
-    height: 90%;
-    width: 100%;
-    padding: 1%;
+    height: 80%;
+    width: auto;
+    padding: 8%;
 }
