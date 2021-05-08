@@ -58,6 +58,11 @@ body {
     font-size: 4vw;
 }
 
+.about_us_header {
+    font-family: 'Questrial', sans-serif;
+    font-size: 2vw;
+}
+
 .live_project_feature_desc {
     font-family: 'Questrial', sans-serif;
     color: grey;
@@ -103,16 +108,9 @@ body {
 }
 
 [personal] {
-    /* background-image: url("../images/backgrounds/hand.jpeg"); */
-    background-image: url("../images/backgrounds/boat.jpeg");
+    background-image: url("../images/backgrounds/hand.jpeg");
     background-position: center;
     background-size: 100%, 100%;
     background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
-.bill_image {
-    height: 80%;
-    width: auto;
-    padding: 8%;
-}

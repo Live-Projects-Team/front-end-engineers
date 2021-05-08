@@ -90,26 +90,6 @@
         .transaction_out {
             color: red;
         }
-        
-        .top_nav {
-            height: 70px;
-            width: calc(100% - 200px);
-            margin: 0 0 0 188px;
-            position: fixed;
-            display: none;
-            z-index: 10;
-            box-shadow: 0px 0px 3px rgba(153, 152, 152, 0.781);
-            top: 0;
-        }
-        
-        .bill_type {
-            height: 100%;
-            background-color: white;
-            text-align: center;
-            font-weight: bold;
-            border-radius: 15px;
-            margin: 20px;
-        }
     </style>
 
 
@@ -117,10 +97,6 @@
 
 <body personal>
     <div class="container-fluid">
-        <div class="container-fluid top_nav bg-glass" id="top_nav">
-
-        </div>
-
         <div class="row">
             <div class="personal_nav bg-glass">
                 <div class="container" style="margin-top: 20px;">
@@ -128,7 +104,7 @@
                 </div>
                 <ul class="nav nav-tabs flex-column" style="margin-top: 30px;">
                     <li class="nav-item">
-                        <a class="nav-link myaccount active" id="myacc" data-bs-toggle="tab" href="#my_account">My Account</a>
+                        <a class="nav-link active" data-bs-toggle="tab" href="#my_account">My Account</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="tab" href="#paybill">Pay Bills</a>
@@ -157,7 +133,6 @@
 
 
             <div class="tab-content bg-glass">
-
                 <div class="tab-pane active" id="my_account">
                     <div class="container name_image bg-personal">
                         <div style="height: 150px; width: 100%;">
@@ -167,7 +142,6 @@
                             <span style="font-size: 4vw;">User Name</span>
                             <br>
                             <span style="color: grey;">yourname@example.com</span>
-                            <br>
                         </div>
 
                     </div>
@@ -228,7 +202,7 @@
                                 <div class="col transaction_amount"><span id="in_out"><i class="fa fa-arrow-down transaction_out"></i></span>500.00 TZS</div>
                             </div>
                             <div class="row transaction_item">
-                                <div class="col transaction_name">HESLB</div>
+                                <div class="col transaction_name">HELSB</div>
                                 <div class="col transaction_date">25-4-2021</div>
                                 <div class="col transaction_amount"><span id="in_out"><i class="fa fa-arrow-up transaction_in"></i></span>1,500,000.20 TZS</div>
                             </div>
@@ -236,62 +210,23 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="paybill">
-                    <div class="container bills bg-personal">
-                        <span style="color: #32289b; font-weight: bold; font-size: 2.5vw; margin: 7%;"> Pay Bills</span>
-
-                        <div class="container">
-                            <div class="row" style="height: 200px; margin-top: 20px;">
-                                <div class="col-sm bill_type">
-                                    <img src="./images/assets/luku.jpeg" class="bill_image" alt="luku">
-                                    <br>
-                                    <span style="height: 9%; padding-bottom: 1%;">LUKU</span>
-                                </div>
-                                <div class="col-sm bill_type">
-                                    <img src="./images/assets/maji.png" class="bill_image" alt="luku">
-                                    <br>
-                                    <span style="height: 9%; padding-bottom: 1%;">MAJI</span>
-                                </div>
-                                <div class="col-sm bill_type">
-                                    <img src="./images/assets/ving'amuzi.jpeg" class="bill_image" alt="luku">
-                                    <br>
-                                    <span style="height: 9%; padding-bottom: 1%;">VING'AMUZI</span>
-                                </div>
-                            </div>
-                            <div class="row" style="height: 200px; margin-top: 20px;">
-                                <div class="col-sm bill_type">
-                                    <img src="./images/assets/school.png" class="bill_image" alt="luku">
-                                    <br>
-                                    <span style="height: 9%; padding-bottom: 1%;">ADA SHULENI</span>
-                                </div>
-                                <div class="col-sm bill_type">
-                                    <img src="./images/assets/hospital.png" class="bill_image" alt="luku">
-                                    <br>
-                                    <span style="height: 9%; padding-bottom: 1%;">AFYA</span>
-                                </div>
-                                <div class="col-sm bill_type"></div>
-                            </div>
-                        </div>
-
-
-
-
-                    </div>
+                <div class="tab-pane" style="background-color: red;" id="paybill">
+                    <p>pay bils</p>
                 </div>
-                <div class="tab-pane fade" style="background-color: blue;" id="goverment">
+                <div class="tab-pane" style="background-color: blue;" id="goverment">
                     <p>Government</p>
                 </div>
-                <div class="tab-pane fade" style="background-color: yellow;" id="send">
+                <div class="tab-pane" style="background-color: yellow;" id="send">
                     <p>send money</p>
                 </div>
-                <div class="tab-pane fade" style="background-color: orange;" id="services">
+                <div class="tab-pane" style="background-color: orange;" id="services">
                     <p>Financial services</p>
                 </div>
-                <div class="tab-pane fade" style="background-color: wheat;" id="sports">
+                <div class="tab-pane" style="background-color: wheat;" id="sports">
                     <p>sports Payment</p>
                 </div>
 
-                <div class="tab-pane fade" style="background-color: cyan;" id="setting">
+                <div class="tab-pane" style="background-color: cyan;" id="setting">
                     <p>Setting</p>
                 </div>
             </div>
@@ -299,9 +234,12 @@
 
     </div>
 
+
+
+
+
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script src="./bootstrap-5.0.0-beta3-dist/js/bootstrap.min.js"></script>
-    <script src="./js/main.js"></script>
 </body>
 
 </html>
