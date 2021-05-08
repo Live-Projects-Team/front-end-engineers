@@ -1,0 +1,199 @@
+*{
+  box-sizing: border-box;
+  padding:0;
+  margin:0;
+}
+body{
+  height:100vh;
+}
+.bg-image{
+    background-image: url("https://www.mitel.com/-/media/mitel/images/content-entry-photos/photo-of-man-at-desk-using-mobile-and-laptop.jpg?modified=20180413152810");
+    background-position: left;
+    background-repeat:no-repeat;
+    background-size: cover;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    height:100%;
+    width:100%;
+    position:absolute;
+    
+}
+.login-form {
+    z-index:1;
+    position:absolute;
+    border-radius:20%;
+    top:50%;
+    left:50%;
+    height:486.81px;
+    width:400px;
+    display:grid;
+    grid-template-columns:85% 15%;
+    grid-template-areas:'form nav' ;
+    justify-content: space-around;
+    grid-column-gap: 0;
+    transform:translate(-50%, -50%);
+    /* background-color:#f3f3f4; */
+  }
+  
+  .login-form form {
+    max-width:320px;
+    grid-area:form;
+    justify-self: end;
+    width:100%;
+    height:100%;
+    background-color:rgba(255, 255, 255, 0.816);
+    padding:40px;
+    border-top-left-radius:3%;
+    border-bottom-left-radius: 3%;
+    
+    color:#000;
+    box-shadow:2px 2px 4px rgba(0,0,0,0.2);
+  }
+  .logo{
+    height: 133.64px; 
+    max-width:200px;
+  }
+  .login-form .illustration {
+    text-align:center;
+    padding:15px 0 20px;
+    font-size:100px;
+    color:#2980ef;
+  }
+  
+  .login-form form .form-control {
+    background:none;
+    border:none;
+    border-bottom:1px solid #434a52;
+    border-radius:0;
+    box-shadow:none;
+    outline:none;
+    color:inherit;
+  }
+  
+  .login-form form .btn-primary {
+    background:#fc6315;
+    border:none;
+    border-radius:4px;
+    padding:11px;
+    box-shadow:none;
+    margin-top:26px;
+    text-shadow:none;
+    outline:none;
+  }
+  
+  .login-form form .btn-primary:hover, .login-form form .btn-primary:active {
+    background:#c24e13;
+    outline:none;
+  }
+  
+  .login-form form .forgot {
+    display:block;
+    text-align:center;
+    font-size:12px;
+    color:#6f7a85;
+    opacity:0.9;
+    text-decoration:none;
+  }
+  
+  .login-form form .forgot:hover, .login-form form .forgot:active {
+    opacity:1;
+    text-decoration:none;
+  }
+  
+  .login-form form .btn-primary:active {
+    transform:translateY(1px);
+  }
+  
+  .side-options{
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    height:100%;
+    justify-content: space-between;
+    align-items: center;
+    /* position:relative;
+    top:47.55%;
+    left: 39.4%; */
+    background-color:#fc621569;
+    border-bottom-right-radius:30px;
+    border-top-right-radius:30px;
+  }
+  .side-options .nav-item{
+    height:100%;
+    width:100%;
+    text-align: center;
+    padding-top:27px;
+    padding-bottom:10px;
+    padding-left:2px;
+    z-index:2;
+    color:white;
+    outline:mintcream;
+    cursor:pointer; 
+    grid-area:nav;
+    
+  }
+  .detail{
+    font-size: 0.6rem;
+    font-weight: bold;
+  }
+
+  #element-one{
+    border-top-right-radius:50px;
+  }
+  #element-last{
+    border-bottom-right-radius:50px;
+
+  }
+  .icon{
+    font-size:1.2rem;
+  }
+  #hover-button{
+    
+          left:0;
+            position:absolute;
+            width:100%;
+            height:25%;
+            border-top-right-radius:30px;
+            border-bottom-right-radius:30px;
+            transition:.5s;
+            background-color:#fc6215;
+            transition:.5s;
+            transition-timing-function: ease-in-out;
+        }
+  .form-content{
+    position:relative;
+  }
+  .input-group{
+    position:absolute;
+    displaY:flex;
+    flex-direction: column;
+    width: 75%;
+    justify-content: space-around;
+  }
+
+  .hover-button-customer{
+    top:0;
+  }
+  .hover-button-merchant{
+    top:25%;
+  }
+  .hover-button-admin{
+    top:50%;
+  }
+  .hover-button-contact{
+    top:75%;
+  }
+  .hidden{
+    display:none;
+  }
+  .m-fadeOut {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 300ms, opacity 300ms;
+  }
+  .m-fadeIn {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 300ms;
+  }

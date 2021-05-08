@@ -4122,15 +4122,13 @@ fieldset:disabled .btn {
 }
 
 .nav-tabs {
-    border-bottom: 1px solid #dee2e6
+    border-bottom: 1px solid transparent
 }
 
 .nav-tabs .nav-link {
-    margin-bottom: -1px;
+    margin: 2px;
     background: 0 0;
-    border: 1px solid transparent;
-    border-top-left-radius: .25rem;
-    border-top-right-radius: .25rem
+    border-radius: 2em;
 }
 
 .nav-tabs .nav-link:focus,
@@ -4197,7 +4195,6 @@ fieldset:disabled .btn {
 }
 
 .navbar {
-    position: sticky;
     position: relative;
     display: flex;
     top: 0;
@@ -5396,7 +5393,7 @@ fieldset:disabled .btn {
 }
 
 .list-group-flush>.list-group-item {
-    border-width: 0 0 1px
+    border-width: 0
 }
 
 .list-group-flush>.list-group-item:last-child {
@@ -5724,7 +5721,7 @@ fieldset:disabled .btn {
 }
 
 .modal-backdrop.show {
-    opacity: .5
+    opacity: 0;
 }
 
 .modal-header {
@@ -5733,7 +5730,7 @@ fieldset:disabled .btn {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 1rem;
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: 0px solid #dee2e6;
     border-top-left-radius: calc(.3rem - 1px);
     border-top-right-radius: calc(.3rem - 1px)
 }
@@ -7941,7 +7938,7 @@ fieldset:disabled .btn {
 
 .bg-glass {
     background-color: rgba(255, 255, 255, 0.205);
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(13px);
 }
 
 .bg-light {

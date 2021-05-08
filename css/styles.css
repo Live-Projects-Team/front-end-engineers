@@ -62,3 +62,51 @@ body {
     font-family: 'Questrial', sans-serif;
     color: grey;
 }
+
+.footer_header {
+    color: black;
+    font-family: 'Questrial', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 25px;
+}
+
+.footer_ul {
+    color: rgb(165, 165, 165);
+    text-decoration: none;
+    list-style-type: none;
+    margin-top: 50px;
+}
+
+.footer_ul>a {
+    text-decoration: none;
+    color: rgb(165, 165, 165);
+}
+
+.live_pesa_footer {
+    margin-top: 120px;
+    padding-top: 30px;
+    padding-left: 5%;
+    padding-right: 4%;
+    background-color: whitesmoke;
+}
+
+[footericons]>i {
+    font-size: 20px;
+    color: rgb(165, 165, 165);
+    transition: 0.7s;
+}
+
+[footericons]>i:hover {
+    color: #32289b;
+    transition: 0.7s;
+}
+
+[personal] {
+    /* background-image: url("../images/backgrounds/hand.jpeg"); */
+    background-image: url("../images/backgrounds/boat.jpeg");
+    background-position: center;
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

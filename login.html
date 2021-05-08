@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon/favicon.ico" type="image/x-icon">  
+    <title>Live-Pesa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="bg-image">
+    </div>
+    <!-- Login Forms -->
+    <div class="login-form">
+        <form class="form-content" method="post">
+            <!-- <h2 style='color:orange;'>Customer</h2> -->
+            <div class="input-group" id="customer-login">
+            <div class="illustration"><img class="logo" src="images/logo/logo.png" alt="logo"></div>
+            <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
+            <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
+            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div><a href="#" class="forgot" style="text-shadow: 0px 0px 2px lightgrey;">Forgot your email or password?</a>
+            </div>
+            <div class="input-group hidden" id="merchant-login">
+                <div class="illustration"><img class="logo" src="images/logo/logo.png" alt="logo"></div>
+                <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
+                <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
+                <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div><a href="#" class="forgot" style="text-shadow: 0px 0px 2px lightgrey;">Forgot your email or password?</a>
+            </div>
+            <div class="input-group hidden" id="user-login">
+                <div class="illustration"><img class="logo" src="images/logo/logo.png" alt="logo"></div>
+                <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
+                <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
+                <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div><a href="#" class="forgot" style="text-shadow: 0px 0px 2px lightgrey;">Forgot your email or password?</a>
+                </div>
+            <div class="input-group hidden" id="admin-login">
+                    <div class="illustration"><img class="logo" src="images/logo/logo.png" alt="logo"></div>
+                    <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
+                    <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
+                    <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div><a href="#" class="forgot" style="text-shadow: 0px 0px 2px lightgrey;">Forgot your email or password?</a>
+                </div>
+        </form>
+        <div class="side-options">
+            <div id="hover-button" class="hover-button-customer">
+            </div>
+            <div onclick="customerPosition()" class="nav-item" id="customer-nav">
+            <span class="material-icons icon">
+                person
+                </span>
+            <span class="detail">Customer</span>
+            </div>
+            <div onclick="merchantPosition()" class="nav-item" id="merchant-nav">
+                <span class="material-icons icon">
+                    person
+                    </span>
+                <span class="detail">Merchant</span>
+                </div>
+                <div onclick="adminPosition()" class="nav-item" id="admin-nav">
+                    <span class="material-icons icon">
+                        person
+                        </span>
+                    <span class="detail">Admin</span>
+                    </div>
+                    <div onclick="contactPosition()" class="nav-item">
+                        <span class="material-icons icon">
+                            person
+                            </span>
+                        <span class="detail">Contact</span>
+                        </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var btn=document.getElementById("hover-button");
+
+function customerPosition(){
+    btn.className="hover-button-customer";
+    btn.style
+}
+function adminPosition(){
+    btn.className="hover-button-admin";
+}
+function merchantPosition(){
+    btn.className="hover-button-merchant";
+}
+function contactPosition(){
+    btn.className="hover-button-contact";
+}
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+</body>
+</html>
