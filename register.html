@@ -11,7 +11,7 @@
     <link href='' rel='stylesheet'>
     <style>
         .register {
-            background: -webkit-linear-gradient(left, #c24e13, #c24e13);
+            background: -webkit-linear-gradient(left, #EBB22C, #EBB22C);
             margin-top: 3%;
             padding: 3%;
         }
@@ -84,7 +84,7 @@
             border: none;
             border-radius: 1.5rem;
             padding: 2%;
-            background: #c24e13;
+            background: #EBB22c;
             color: #fff;
             font-weight: 600;
             width: 50%;
@@ -94,7 +94,7 @@
         .register .nav-tabs {
             margin-top: 3%;
             border: none;
-            background: #c24e13;
+            background: #EBB22c;
             ;
             border-radius: 1.5rem;
             width: 28%;
@@ -116,8 +116,8 @@
         
         .register .nav-tabs .nav-link.active {
             width: 100px;
-            color: #c24e13;
-            border: 2px solid #c24e13;
+            color: #EBB22c;
+            border: 2px solid #EBB22c;
             border-top-left-radius: 1.5rem;
             border-bottom-left-radius: 1.5rem;
         }
@@ -141,9 +141,7 @@
                 <img src="" alt="" />
                 <h3>Welcome</h3>
                 <p>TO LIVE PESA!</p>
-                <a href="./login.html">
-                    <input type="submit" name="login" value="Login" /><br />
-                </a>
+                <input type="submit" name="" value="Login" /><br />
             </div>
             <div class="col-md-9 register-right">
                 <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
@@ -252,7 +250,123 @@
         </div>
 
     </div>
-    <script type='text/javascript'></script>
+    <script type='text/javascript'>
+        function validateform() {
+            var ufname = document.myform.fname.value;
+            var lname = document.myform.lname.value;
+            var password = document.myform.password.value;
+            var cpassword = document.myform.cpassword.value;
+            var Phone = document.myform.phone.value;
+            var gender = document.myform.gender.value;
+            var email = document.myform.email.value;
+            var atposition = email.indexOf("@");
+            var dotposition = email.lastIndexOf(".");
+
+            if (fname_validate(fname, 5, 12)) {
+                if (lname_validate(lname, 5, 12)) {
+                    if (password_validate(passsword, 7, 12)) {
+                        if (allLetter(fname)) {
+                            if (alphanumeric(phone)) {
+                                if (ValidateEmail(email)) {
+                                    if (validategender(gender)) {}
+                                }
+                            }
+                        }
+                    }
+                    return false;
+
+                    function fname_validate(uid, mx, my) {
+                        var fname_len = fname.value.length;
+                        if (fname_len == 0 || fname_len >= my || fname_len < mx) {
+                            alert("First name should not be empty / length be between " + mx + " to " + my);
+                            fname.focus();
+                            return false;
+                        }
+                        return true;
+                    }
+                    var lname_len = lname.value.length;
+                    if (fname_len == 0 || lname_len >= my || lname_len < mx) {
+                        alert("First name should not be empty / length be between " + mx + " to " + my);
+                        lname.focus();
+                        return false;
+                    }
+                    return true;
+
+                    function passid_validation(password, mx, my) {
+                        var password_len = password.value.length;
+                        if (password_len == 0 || password_len >= my || password_len < mx) {
+                            alert("Password should not be empty / length be between " + mx + " to " + my);
+                            password.focus();
+                            return false;
+                        }
+                        return true;
+                    }
+
+                    function allLetter(lname) {
+                        var letters = /^[A-Za-z]+$/;
+                        if (lname.value.match(letters)) {
+                            return true;
+                        } else {
+                            alert('last name must have alphabet characters only');
+                            lname.focus();
+                            return false;
+                        }
+                    }
+
+                    function alphanumeric(phone) {
+                        var letters = /^[0-9a-zA-Z]+$/;
+                        if (phone.value.match(numbers)) {
+                            return true;
+                        } else {
+                            alert('phone numbers must have alphanumeric characters only');
+                            phone.focus();
+                            return false;
+                        }
+                    }
+
+                    function validateemail(email) {
+                        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                        if (email.value.match(mailformat)) {
+                            return true;
+                        } else {
+                            alert("You have entered an invalid email address!");
+                            return false;
+                        }
+                    }
+
+                    function validsex(gender) {
+                        x = 0;
+
+                        if (gender.checked) {
+                            x++;
+                        }
+                        if (gender.checked) {
+                            x++;
+                        }
+
+                        if (x == 2) {
+                            alert('Both Male/Female are checked');
+                            gender.checked = false
+                            gender.checked = false
+                            gender.focus();
+                            return false;
+                        }
+
+                        if (x == 0) {
+                            alert('Select Male/Female');
+                            gender.focus();
+                            return false;
+                        } else {
+                            alert('Form Succesfully Submitted');
+                            window.location.reload()
+                            return true;
+                        }
+                    }
+                }
+            }
+
+        }
+    </script>
 </body>
 
 </html>
