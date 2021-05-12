@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
-<body>
+<body onload="startWorker">
 
     <div class="container-fluid" style="position: fixed; margin-left: -11px; top: 0; z-index: 10;">
         <nav class="navbar navbar-expand-lg navbar-light bg-glass" id="navbar_top">
@@ -248,6 +248,16 @@
     <script type="text/javascript" src="https://unpkg.com/imagekit-javascript/dist/imagekit.min.js"></script>
     <script src="./bootstrap-5.0.0-beta3-dist/js/bootstrap.min.js"></script>
     <script src="./js/main.js"></script>
+    <script>
+        function startWorker() {
+            if (typeof(Worker) !== "undefined") {
+                if (typeof(w) == "undefined") {
+                    w = new Worker("service_worker.js");
+                }
+
+            }
+        }
+    </script>
 
 </body>
 
