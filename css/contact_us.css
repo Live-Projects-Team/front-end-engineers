@@ -29,7 +29,7 @@ body {
     top: 0;
     background: url("/images/backgrounds/backround.jpg") no-repeat center;
     background-size: cover;
-    filter: blur(1px);
+    filter: blur(0px);
     z-index: -1;
 }
 
