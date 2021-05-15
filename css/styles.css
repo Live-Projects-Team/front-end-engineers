@@ -33,7 +33,7 @@ body {
 }
 
 .hero_image {
-    height: 550px;
+    height: 100vh;
     position: absolute;
     top: 0;
     background-image: url("../images/backgrounds/livepesa_phone_eating.jpg");
@@ -50,7 +50,7 @@ body {
 
 .livepesa_main_landing {
     position: relative;
-    margin-top: 600px;
+    margin-top: 108vh;
 }
 
 .live_project_feature_name {
