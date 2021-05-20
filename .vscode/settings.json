@@ -1,18 +1,5 @@
 {
     "C_Cpp.errorSquiggles": "Enabled"
+    
 }
-{
-    "media.player": {
-        "players": [
-            {
-                "name": "My Spotify player",
-                "type": "spotify",
-            },
 
-            {
-                "name": "My VLC player",
-                "type": "vlc",
-            }
-        ]
-    }
-}
